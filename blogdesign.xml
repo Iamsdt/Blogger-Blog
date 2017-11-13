@@ -1999,7 +1999,7 @@ jQuery.migrateMute===void 0&&(jQuery.migrateMute=!0),function(e,t,n){function r(
 </script>
 
 <!--
-<script type='text/javascript' async = 'async'>
+<script type='text/javascript' async='async' = 'async'>
 //<![CDATA[
 
 function showrecentcomments(json){for(var i=0;i<a_rc;i++){var b_rc=json.feed.entry[i];var c_rc;if(i==json.feed.entry.length)break;for(var k=0;k<b_rc.link.length;k++){if(b_rc.link[k].rel=='alternate'){c_rc=b_rc.link[k].href;break;}}c_rc=c_rc.replace("#","#comment-");var d_rc=c_rc.split("#");d_rc=d_rc[0];var e_rc=d_rc.split("/");e_rc=e_rc[5];e_rc=e_rc.split(".html");e_rc=e_rc[0];var f_rc=e_rc.replace(/-/g," ");f_rc=f_rc.link(d_rc);var g_rc=b_rc.published.$t;var h_rc=g_rc.substring(0,4);var i_rc=g_rc.substring(5,7);var j_rc=g_rc.substring(8,10);var k_rc=new Array();k_rc[1]="Jan";k_rc[2]="Feb";k_rc[3]="Mar";k_rc[4]="Apr";k_rc[5]="May";k_rc[6]="Jun";k_rc[7]="Jul";k_rc[8]="Aug";k_rc[9]="Sep";k_rc[10]="Oct";k_rc[11]="Nov";k_rc[12]="Dec";if("content" in b_rc){var l_rc=b_rc.content.$t;}else if("summary" in b_rc){var l_rc=b_rc.summary.$t;}else var l_rc="";var re=/<\S[^>]*>/g;l_rc=l_rc.replace(re,"");if(m_rc==true)document.write('On '+k_rc[parseInt(i_rc,10)]+' '+j_rc+' ');document.write('<a href="'+c_rc+'">'+b_rc.author[0].name.$t+'</a> commented');if(n_rc==true)document.write(' on '+f_rc);document.write(': ');if(l_rc.length<o_rc){document.write('<i>&#8220;');document.write(l_rc);document.write('&#8221;</i><br/><br/>');}else{document.write('<i>&#8220;');l_rc=l_rc.substring(0,o_rc);var p_rc=l_rc.lastIndexOf(" ");l_rc=l_rc.substring(0,p_rc);document.write(l_rc+'&hellip;&#8221;</i>');document.write('<br/><br/>');}}}
@@ -2124,7 +2124,7 @@ function createSummaryAndThumb(pID){
     <b:widget-settings>
       <b:widget-setting name='displayUrl'/>
       <b:widget-setting name='displayHeight'>0</b:widget-setting>
-      <b:widget-setting name='sectionWidth'>34</b:widget-setting>
+      <b:widget-setting name='sectionWidth'>228</b:widget-setting>
       <b:widget-setting name='useImage'>false</b:widget-setting>
       <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
       <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
@@ -3385,7 +3385,7 @@ color:#fff;
   <b:widget id='Label1' locked='false' title='Categories' type='Label' version='1'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-      <b:widget-setting name='display'>LIST</b:widget-setting>
+      <b:widget-setting name='display'>CLOUD</b:widget-setting>
       <b:widget-setting name='selectedLabelsList'>animation,database,dialog,fab,firebase,github,kotlin-io,layout,material,recycler-view,services,settings,string,style</b:widget-setting>
       <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
       <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
@@ -3424,65 +3424,6 @@ color:#fff;
         </span>
       </b:loop>
     </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='1'>
-    <b:widget-settings>
-      <b:widget-setting name='numItemsToShow'>4</b:widget-setting>
-      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
-      <b:widget-setting name='showSnippets'>true</b:widget-setting>
-      <b:widget-setting name='timeRange'>LAST_YEAR</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <b:if cond='data:title'><h2><data:title/></h2></b:if>
-  <div class='widget-content popular-posts'>
-    <ul>
-      <b:loop values='data:posts' var='post'>
-      <li>
-        <b:if cond='data:showThumbnails == &quot;false&quot;'>
-          <b:if cond='data:showSnippets == &quot;false&quot;'>
-            <!-- (1) No snippet/thumbnail -->
-            <a expr:href='data:post.href'><data:post.title/></a>
-          <b:else/>
-            <!-- (2) Show only snippets -->
-            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            <div class='item-snippet'><data:post.snippet/></div>
-          </b:if>
-        <b:else/>
-          <b:if cond='data:showSnippets == &quot;false&quot;'>
-            <!-- (3) Show only thumbnails -->
-            <div class='item-thumbnail-only'>
-              <b:if cond='data:post.thumbnail'>
-                <div class='item-thumbnail'>
-                  <a expr:href='data:post.href' target='_blank'>
-                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                  </a>
-                </div>
-              </b:if>
-              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            </div>
-            <div style='clear: both;'/>
-          <b:else/>
-            <!-- (4) Show snippets and thumbnails -->
-            <div class='item-content'>
-              <b:if cond='data:post.thumbnail'>
-                <div class='item-thumbnail'>
-                  <a expr:href='data:post.href' target='_blank'>
-                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                  </a>
-                </div>
-              </b:if>
-              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-              <div class='item-snippet'><data:post.snippet/></div>
-            </div>
-            <div style='clear: both;'/>
-          </b:if>
-        </b:if>
-      </li>
-      </b:loop>
-    </ul>
     <b:include name='quickedit'/>
   </div>
 </b:includable>
@@ -3995,6 +3936,7 @@ for (var i = 0; i &lt; randomposts_number; i++) {
 Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>. All right reserved.
 </p>
 <p class='credits-rightnbt frightnbt'>
+<a href='/p/about.html' style='padding:10px'>About</a>
 <a href='/p/blog-page.html' style='padding:10px'>Privacy Policy</a>
 <a href='/p/term.html' style='padding:10px'>Terms Of Use</a>
 <a href='/p/map.html' style='padding:10px'>Sitemap</a>
@@ -4932,7 +4874,6 @@ function makeArray( obj ) {
   return ImagesLoaded;
 
 });
-
 //]]>
 </script>
 <!-- //todo video player-->
