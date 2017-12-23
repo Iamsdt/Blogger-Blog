@@ -29,7 +29,8 @@
 
     <meta content='java, kotlin, sql, gradle, XML, coding, android, android app development, tutorial, api,android source code' name='keywords'/>
     <!-- Description and Keywords (end) -->
-    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+    
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
         <meta expr:content='data:blog.pageName' property='og:title'/>
         <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
         <meta content='article' property='og:type'/>
@@ -64,8 +65,8 @@
 <meta content='27B2CB94A6479D948856DF32A5CC23FD' name='msvalidate.01'/>
 
       
-    <!-- Social Media meta tag need customer customization -->
-    <meta content='Khulna, Bangladesh' name='geo.placename'/>
+<!-- Social Media meta tag need customer customization -->
+<meta content='Khulna, Bangladesh' name='geo.placename'/>
 <meta content='Shudipto Trafder' name='author'/>
 <meta content='general' name='rating'/>
 <meta content='Bangladesh' name='geo.country'/>
@@ -75,8 +76,9 @@
 <meta content='https://www.facebook.com/iamsdt' property='article:author'/>
 <meta content='https://www.facebook.com/iamsdt' property='article:publisher'/>
 <meta content='https://www.facebook.com/iamsdt' property='fb:admins'/>
-    <meta content='@Iamsdt' name='twitter:site'/>
-    <meta content='@Iamsdt' name='twitter:creator'/> 
+<meta content='1087310101372234 ' property='fb:app_id'/> 
+<meta content='@Iamsdt' name='twitter:site'/>
+<meta content='@Iamsdt' name='twitter:creator'/> 
     
 <b:skin><![CDATA[/*
 -----------------------------------------------
@@ -1984,6 +1986,21 @@ width: 30%;
 width:100%;
 }
 
+/* CSS Author Bio Box */
+.authorboxwrap{Font-family: Open Sans;background:#fff;margin:10px auto 20px;padding:20px;overflow:hidden;border:1px solid #ccc;}
+.avatar-container {float:left;margin-right:20px;border: 1px solid silver;padding: 3px;}
+.avatar-container img{width:110px;height:auto;}
+.author_description_container h4{font-family:Open Sans; font-weight:700;font-size:16px;display:block;margin:0;margin-bottom:2px}
+.author_description_container h4 a{color:#0288D1}
+.author_description_container h4 a:hover{color:#404040}
+.author_description_container p{margin:0;color:#888;font-size:95%;margin-bottom:8px;font-family: Open Sans;}
+.authorsocial a{display:inline-block;text-align:center;margin-right:10px}
+.authorsocial a i{font-family:Fontawesome;width:20px;height:20px;line-height:20px;padding:5px;display:block;opacity:1;border-radius:50%;transition:all .3s;}
+.authorsocial a:nth-child(1) i {background:#2d609b;color:#fff;}
+.authorsocial a:nth-child(2) i {background:#19bfe5;color:#fff;}
+.authorsocial a:nth-child(3) i {background:#eb4026;color:#fff;}
+.authorsocial a:hover:nth-child(1) i,.authorsocial a:hover:nth-child(2) i,.authorsocial a:hover:nth-child(3) i {opacity:0.90;}
+
 ]]></b:skin>
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' type='text/javascript'/>
@@ -2055,6 +2072,15 @@ function createSummaryAndThumb(pID){
 </head>
 	
 <body class='single-postnbt'>
+
+<div id='fb-root'/>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &#39;https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.11&amp;appId=1087310101372234&#39;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));</script>
     
     <!-- Sticky-Menu-Start -->
    <div class='nav_wrapper'>
@@ -2184,36 +2210,37 @@ function createSummaryAndThumb(pID){
 <div class='wrappernbt sectionnbt medium-paddingnbt'>
 <div class='section-innernbt'>
 <div class='contentnbt fleftnbt'>
-<b:section class='mainblogsec' id='mainblogsec' showaddelement='no'>
-  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
-    <b:widget-settings>
-      <b:widget-setting name='showShareButtons'>false</b:widget-setting>
-      <b:widget-setting name='authorLabel'>Article Writer:</b:widget-setting>
-      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>on</b:widget-setting>
-      <b:widget-setting name='reactionsLabel'>reaction</b:widget-setting>
-      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
-      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-      <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
-      <b:widget-setting name='postsPerAd'>1</b:widget-setting>
-      <b:widget-setting name='style.bordercolor'>#000000</b:widget-setting>
-      <b:widget-setting name='backlinksLabel'>post link</b:widget-setting>
-      <b:widget-setting name='showDateHeader'>true</b:widget-setting>
-      <b:widget-setting name='style.textcolor'>#512da8</b:widget-setting>
-      <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#2196fc</b:widget-setting>
-      <b:widget-setting name='postLocationLabel'>???&#2509;?&#2494;?:</b:widget-setting>
-      <b:widget-setting name='showAuthor'>true</b:widget-setting>
-      <b:widget-setting name='style.linkcolor'>#2196fc</b:widget-setting>
-      <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='showLabels'>true</b:widget-setting>
-      <b:widget-setting name='postLabelsLabel'>Tag:</b:widget-setting>
-      <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-      <b:widget-setting name='showInlineAds'>false</b:widget-setting>
-      <b:widget-setting name='showReactions'>false</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main' var='top'>
+
+    <b:section class='mainblogsec' id='mainblogsec' showaddelement='no'>
+      <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+        <b:widget-settings>
+          <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+          <b:widget-setting name='authorLabel'>Article Writer:</b:widget-setting>
+          <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+          <b:widget-setting name='timestampLabel'>on</b:widget-setting>
+          <b:widget-setting name='reactionsLabel'>reaction</b:widget-setting>
+          <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+          <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+          <b:widget-setting name='showLocation'>false</b:widget-setting>
+          <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+          <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+          <b:widget-setting name='style.bordercolor'>#000000</b:widget-setting>
+          <b:widget-setting name='backlinksLabel'>post link</b:widget-setting>
+          <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+          <b:widget-setting name='style.textcolor'>#512da8</b:widget-setting>
+          <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+          <b:widget-setting name='style.urlcolor'>#2196fc</b:widget-setting>
+          <b:widget-setting name='postLocationLabel'>???&#2509;?&#2494;?:</b:widget-setting>
+          <b:widget-setting name='showAuthor'>true</b:widget-setting>
+          <b:widget-setting name='style.linkcolor'>#2196fc</b:widget-setting>
+          <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
+          <b:widget-setting name='showLabels'>true</b:widget-setting>
+          <b:widget-setting name='postLabelsLabel'>Tag:</b:widget-setting>
+          <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+          <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+          <b:widget-setting name='showReactions'>false</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main' var='top'>
   <b:if cond='data:mobile == &quot;false&quot;'>
 
     <!-- posts -->
@@ -2299,14 +2326,14 @@ function createSummaryAndThumb(pID){
   </b:if>
 
 </b:includable>
-    <b:includable id='backlinkDeleteIcon' var='backlink'>
+        <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
     <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
       <img alt='delete icon' src='//www.blogger.com/img/icon_delete13.gif'/>
     </a>
   </span>
 </b:includable>
-    <b:includable id='backlinks' var='post'>
+        <b:includable id='backlinks' var='post'>
   <a name='links'/><h4><data:post.backlinksLabel/></h4>
   <b:if cond='data:post.numBacklinks != 0'>
     <dl class='comments-block' id='comments-block'>
@@ -2332,31 +2359,19 @@ function createSummaryAndThumb(pID){
     <a class='comment-link' expr:href='data:post.createLinkUrl' expr:id='data:widget.instanceId + &quot;_backlinks-create-link&quot;' target='_blank'><data:post.createLinkLabel/></a>
   </p>
 </b:includable>
-    <b:includable id='comment-form' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <b:if cond='data:mobile'>
-      <h4 id='comment-post-message'>
-        <a expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;' href='javascript:void(0)'><data:postCommentMsg/></a></h4>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
-    <b:else/>
-      <h4 id='comment-post-message'><data:postCommentMsg/></h4>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
-    </b:if>
-    <data:post.friendConnectJs/>
-    <data:post.cmtfpIframe/>
-    <script type='text/javascript'>
-      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
-    </script>
-  </div>
+        <b:includable id='comment-form' var='post'>
+   
+        <!--//todo fb comment-->
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+ <div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'>
+ <script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/>
+ <div>
+ <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='auto'/>
+ </div>
+ </div>
+ </b:if>
 </b:includable>
-    <b:includable id='commentDeleteIcon' var='comment'>
+        <b:includable id='commentDeleteIcon' var='comment'>
   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
     <b:if cond='data:showCmtPopup'>
       <div class='goog-toggle-button'>
@@ -2364,14 +2379,14 @@ function createSummaryAndThumb(pID){
       </div>
     <b:else/>
       <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-        <img alt='delete icon' src='//www.blogger.com/img/icon_delete13.gif'/>
+        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
       </a>
     </b:if>
   </span>
 </b:includable>
-    <b:includable id='comment_count_picker' var='post'>
+        <b:includable id='comment_count_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
-    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
+    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.url.canonical.http'>
     </span>
   <b:else/>
     <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
@@ -2379,40 +2394,38 @@ function createSummaryAndThumb(pID){
     </a>
   </b:if>
 </b:includable>
-    <b:includable id='comment_picker' var='post'>
+        <b:includable id='comment_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
     <b:include data='post' name='iframe_comments'/>
+  <b:elseif cond='data:post.showThreadedComments'/>
+    <b:include data='post' name='threaded_comments'/>
   <b:else/>
-    <b:if cond='data:post.showThreadedComments'>
-      <b:include data='post' name='threaded_comments'/>
-    <b:else/>
-      <b:include data='post' name='comments'/>
-    </b:if>
+    <b:include data='post' name='comments'/>
   </b:if>
 </b:includable>
-    <b:includable id='comments' var='post'>
+        <b:includable id='comments' var='post'>
   <div class='comments' id='comments'>
     <a name='comments'/>
     <b:if cond='data:post.allowComments'>
-      <h4>
-        <b:if cond='data:post.numComments == 1'>
-          1 <data:commentLabel/>:
-        <b:else/>
-          <data:post.numComments/> <data:commentLabelPlural/>:
-        </b:if>
-      </h4>
+      <h4><data:post.commentLabelFull/>:</h4>
 
       <b:if cond='data:post.commentPagingRequired'>
         <span class='paging-control-container'>
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
-          &#160;
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'><data:post.olderLinkText/></a>
-          &#160;
+          <b:if cond='data:post.hasOlderLinks'>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
+              &#160;
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'><data:post.olderLinkText/></a>
+              &#160;
+          </b:if>
+
           <data:post.commentRangeText/>
-          &#160;
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'><data:post.newerLinkText/></a>
-          &#160;
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'><data:post.newestLinkText/></a>
+
+          <b:if cond='data:post.hasNewerLinks'>
+            &#160;
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'><data:post.newerLinkText/></a>
+            &#160;
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'><data:post.newestLinkText/></a>
+          </b:if>
         </span>
       </b:if>
 
@@ -2421,7 +2434,7 @@ function createSummaryAndThumb(pID){
           <b:loop values='data:post.comments' var='comment'>
             <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
               <b:if cond='data:comment.favicon'>
-                <img expr:alt='delete icon' expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
+                <img expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
               </b:if>
               <a expr:name='data:comment.anchorName'/>
               <b:if cond='data:blog.enabledCommentProfileImages'>
@@ -2482,12 +2495,9 @@ function createSummaryAndThumb(pID){
           <b:else/>
             <data:post.noNewCommentsText/>
           </b:if>
-        <b:else/>
-          <b:if cond='data:post.allowComments'>
-            <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
-          </b:if>
+        <b:elseif cond='data:post.allowComments'/>
+          <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
         </b:if>
-
       </p>
     </b:if>
     <b:if cond='data:showCmtPopup'>
@@ -2499,14 +2509,12 @@ function createSummaryAndThumb(pID){
 
     <div id='backlinks-container'>
     <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
-       <b:if cond='data:post.showBacklinks'>
-         <b:include data='post' name='backlinks'/>
-       </b:if>
+       <b:include cond='data:post.showBacklinks' data='post' name='backlinks'/>
     </div>
     </div>
   </div>
 </b:includable>
-    <b:includable id='feedLinks'>
+        <b:includable id='feedLinks'>
   <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
     <b:if cond='data:feedLinks'>
       <div class='blog-feeds'>
@@ -2526,7 +2534,7 @@ function createSummaryAndThumb(pID){
     </div>
   </b:if>
 </b:includable>
-    <b:includable id='feedLinksBody' var='links'>
+        <b:includable id='feedLinksBody' var='links'>
   <div class='feed-links'>
   <data:feedLinksMsg/>
   <b:loop values='data:links' var='f'>
@@ -2534,7 +2542,7 @@ function createSummaryAndThumb(pID){
   </b:loop>
   </div>
 </b:includable>
-    <b:includable id='iframe_comments' var='post'>
+        <b:includable id='iframe_comments' var='post'>
 
   <b:if cond='data:post.allowComments'>
     <script expr:src='data:post.commentSrc' type='text/javascript'/>
@@ -2545,7 +2553,7 @@ function createSummaryAndThumb(pID){
     </b:if>
   </b:if>
 </b:includable>
-    <b:includable id='mobile-index-post' var='post'>
+        <b:includable id='mobile-index-post' var='post'>
   <div class='mobile-date-outer date-outer'>
     <b:if cond='data:post.dateHeader'>
       <div class='date-header'>
@@ -2590,7 +2598,7 @@ function createSummaryAndThumb(pID){
     </div>
   </div>
 </b:includable>
-    <b:includable id='mobile-main' var='top'>
+        <b:includable id='mobile-main' var='top'>
     <!-- posts -->
     <div class='blog-posts hfeed'>
 
@@ -2609,7 +2617,7 @@ function createSummaryAndThumb(pID){
 
    <b:include name='mobile-nextprev'/>
 </b:includable>
-    <b:includable id='mobile-nextprev'>
+        <b:includable id='mobile-nextprev'>
   <div class='blog-pager' id='blog-pager'>
     <b:if cond='data:newerPageUrl'>
       <div class='mobile-link-button' id='blog-pager-newer-link'>
@@ -2634,7 +2642,7 @@ function createSummaryAndThumb(pID){
   </div>
   <div class='clear'/>
 </b:includable>
-    <b:includable id='mobile-post' var='post'>
+        <b:includable id='mobile-post' var='post'>
   <div class='date-outer'>
     <b:if cond='data:post.dateHeader'>
       <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
@@ -2739,7 +2747,7 @@ function createSummaryAndThumb(pID){
     </div>
   </div>
 </b:includable>
-    <b:includable id='nextprev'>
+        <b:includable id='nextprev'>
   <div class='blog-pager' id='blog-pager'>
     <b:if cond='data:newerPageUrl'>
       <span id='blog-pager-newer-link'>
@@ -2764,7 +2772,7 @@ function createSummaryAndThumb(pID){
   </div>
   <div class='clear'/>
 </b:includable>
-    <b:includable id='post' var='post'>
+        <b:includable id='post' var='post'>
 <article class='post hentry single-postnbt' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
 <b:if cond='data:post.firstImageUrl'>
   <meta expr:content='data:post.firstImageUrl' itemprop='image'/>
@@ -2861,6 +2869,37 @@ function createSummaryAndThumb(pID){
       </div>
 	  </b:if>
 	  
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+<div class='authorboxwrap'>
+<div class='authorboxfull'>
+<div class='avatar-container'>
+<a href=''>
+<img class='author_avatar' expr:alt='data:post.author' expr:src='data:post.authorPhoto.url' height='110' width='110'/>
+</a>
+</div>
+<div class='author_description_container'>
+<h4>Author: <a href='https://shudiptotrafder.blogspot.com/' rel='author' target='_blank'><data:post.author/></a></h4>
+<p>
+I start my journey with Android since 2015. I really love android and trying to enlarge my learning range. That's why I share my knowledge on this blog.      
+</p>
+<div class='authorsocial'>
+<a class='img-circle1' href='https://www.facebook.com/Iamsdt' rel='nofollow' target='_blank'><i class='fa fa-facebook'/></a>
+<a class='img-circle1' href='https://www.twitter.com/Iamsdt' rel='nofollow' target='_blank'><i class='fa fa-twitter'/></a>
+<a class='img-circle1' href='https://plus.google.com/+ShudiptoTrafder' rel='nofollow' target='_blank'><i class='fa fa-google-plus'/></a>
+    
+    <a class='img-circle1' href='https://github.com/Iamsdt' rel='nofollow' target='_blank'><i class='fa fa-github'/></a>
+    
+    <a class='img-circle1' href='https://www.linkedin.com/in/shudipto-trafder-b041a97a' rel='nofollow' target='_blank'><i class='fa fa-linkedin'/></a>
+    
+<div class='clr'/>
+</div>
+</div>
+</div>
+</div>
+<div style='clear:both'/>
+</b:if>
+    
+    <!--// todo post author
 	  <b:if cond='data:blog.pageType == &quot;item&quot;'>
       <b:if cond='data:post.authorAboutMe'>
         <div class='author-profile' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
@@ -2877,7 +2916,7 @@ function createSummaryAndThumb(pID){
           <span itemprop='description'><data:post.authorAboutMe/></span>
         </div>
       </b:if>
-	  </b:if>
+	  </b:if> -->
   
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
 <div class='related-postbwrap' id='bpostrelated-post'/>
@@ -2901,6 +2940,7 @@ var relatedPostConfig = {
       callBack: function() {}
 };
 </script>
+
 <script type='text/javascript'>
 //<![CDATA[
 
@@ -2922,7 +2962,7 @@ var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"<h4>
 </b:if>
 
 </b:includable>
-    <b:includable id='postQuickEdit' var='post'>
+        <b:includable id='postQuickEdit' var='post'>
   <b:if cond='data:post.editUrl'>
     <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
       <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
@@ -2931,7 +2971,7 @@ var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"<h4>
     </span>
   </b:if>
 </b:includable>
-    <b:includable id='shareButtons' var='post'>
+        <b:includable id='shareButtons' var='post'>
   
         <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if>
         
@@ -2940,7 +2980,7 @@ var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"<h4>
         <b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if>
         
 </b:includable>
-    <b:includable id='status-message'>
+        <b:includable id='status-message'>
   <b:if cond='data:navMessage'>
   <div class='status-msg-wrap'>
     <div class='status-msg-body'>
@@ -3050,28 +3090,27 @@ width: 100%;
       </b:if>
   </b:if>
 </b:includable>
-    <b:includable id='threaded-comment-form' var='post'>
+        <b:includable id='threaded-comment-form' var='post'>
   <div class='comment-form'>
     <a name='comment-form'/>
     <b:if cond='data:mobile'>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
     </b:if>
-    <data:post.friendConnectJs/>
     <data:post.cmtfpIframe/>
     <script type='text/javascript'>
-      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
     </script>
   </div>
 </b:includable>
-    <b:includable id='threaded_comment_js' var='post'>
+        <b:includable id='threaded_comment_js' var='post'>
   <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
 
   <script type='text/javascript'>
@@ -3134,6 +3173,8 @@ width: 100%;
               for (var k in entry.gd$extendedProperty) {
                 if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
                   comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                  comment.displayTime = entry.gd$extendedProperty[k].value;
                 }
               }
             }
@@ -3196,6 +3237,7 @@ width: 100%;
           }
         }
         if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
           document.getElementById(domId).insertBefore(replybox, null);
           replybox.src = replyUrlParts[0]
               + (commentId ? '&parentID=' + commentId : '')
@@ -3250,15 +3292,13 @@ width: 100%;
 // ]]>
   </script>
 </b:includable>
-    <b:includable id='threaded_comments' var='post'>
+        <b:includable id='threaded_comments' var='post'>
   <div class='comments' id='comments'>
     <a name='comments'/>
     <h4><data:post.commentLabelFull/>:</h4>
 
     <div class='comments-content'>
-      <b:if cond='data:post.embedCommentForm'>
-        <b:include data='post' name='threaded_comment_js'/>
-      </b:if>
+      <b:include cond='data:post.embedCommentForm' data='post' name='threaded_comment_js'/>
       <div id='comment-holder'>
          <data:post.commentHtml/>
       </div>
@@ -3281,34 +3321,42 @@ width: 100%;
 
     <div id='backlinks-container'>
     <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
-       <b:if cond='data:post.showBacklinks'>
-         <b:include data='post' name='backlinks'/>
-       </b:if>
+      <b:include cond='data:post.showBacklinks' data='post' name='backlinks'/>
     </div>
     </div>
   </div>
 </b:includable>
-  </b:widget>
-</b:section>
+      </b:widget>
+    </b:section>
 </div> <!-- /content -->
 	
 <!-- //todo widget start-->
 <div class='sidebarnbt frightnbt' role='complementary'>
 <b:section class='sidebarnbtsec' id='sidebarnbtsec' preferred='yes'>
+  <b:widget id='HTML3' locked='false' title='Find on Facebook' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FandroidSketchpad%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1087310101372234" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
   <b:widget id='HTML2' locked='false' title='Find me:' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;div class=&quot;kt-social-buttons-widget&quot;&gt;
 &lt;ul class=&quot;sidebar-social clearfix&quot;&gt;
 
-&lt;li&gt;&lt;a href=&quot;https://twitter.com/iamsdt&quot; class=&quot;social-btn-twitter&quot; rel=&quot;dofollow&quot;&gt;Follow on Twitter &lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt; &lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;https://facebook.com/iamsdt&quot; class=&quot;social-btn-facebook&quot; rel=&quot;dofollow&quot;&gt;Like on Facebook &lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt; &lt;/a&gt;&lt;/li&gt;
-
 &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/shudipto-trafder-b041a97a&quot; class=&quot;social-btn-linkedin&quot; rel=&quot;dofollow&quot;&gt;Follow on LinkedIn&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt; &lt;/a&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;a href=&quot;https://github.com/Iamsdt&quot; class=&quot;social-btn-github&quot; rel=&quot;dofollow&quot;&gt;Follow on Github &lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCPiGnm6rSV7zaWw9uHWdSLg&quot; class=&quot;social-btn-youtube&quot; rel=&quot;dofollow&quot;&gt;Subscribe on Youtube &lt;i class=&quot;fa fa-youtube&quot;&gt;&lt;/i&gt; &lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -3501,9 +3549,9 @@ color:#fff;
   <b:widget id='Label2' locked='false' title='Labels' type='Label' version='1'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-      <b:widget-setting name='display'>CLOUD</b:widget-setting>
+      <b:widget-setting name='display'>LIST</b:widget-setting>
       <b:widget-setting name='selectedLabelsList'>android,android-advance,animation,data,database,dialog,fab,java,java-code,kotlin,kotlin-advance,layout,material,problem,receiver,recycler-view,recycler-view-tutorial,services,settings,sql,string,style,tutorial</b:widget-setting>
-      <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+      <b:widget-setting name='showType'>ALL</b:widget-setting>
       <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
@@ -3945,6 +3993,17 @@ Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();doc
 <div class='clearnbt'/>
 </div> <!-- /credits-inner -->
 </div> <!-- /credits -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async='async' src='https://www.googletagmanager.com/gtag/js?id=UA-109675888-1'/>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(&#39;js&#39;, new Date());
+
+  gtag(&#39;config&#39;, &#39;UA-109675888-1&#39;);
+</script>
+
 
     <script type='text/javascript'>
 $(&quot;ul li:has(ul)&quot;).addClass(&quot;has-submenu&quot;);
